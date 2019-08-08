@@ -1,0 +1,72 @@
+application: soumyajitnayakweb 
+version: 1
+runtime: python
+api_version: 1
+
+default_expiration: "7d"
+
+handlers:
+- url: /(.*\.html)
+  static_files: \1
+  upload: (.*\.html)
+
+- url: /images/(.*\.ico)
+  mime_type: image/vnd.microsoft.icon
+  static_files: images/\1
+  upload: images/(.*\.ico)
+
+- url: /images/(.*)
+  static_files: images/\1
+  upload: images/(.*)
+
+- url: /photos/(.*)
+  static_files: photos/\1
+  upload: photos/(.*)
+
+- url: /docs/(.*)
+  static_files: docs/\1
+  upload: docs/(.*)
+
+- url: /css/(.*)
+  static_files: css/\1
+  upload: css/(.*)
+
+- url: /fancybox/(.*)
+  static_files: fancybox/\1
+  upload: fancybox/(.*)
+
+- url: /fonts/(.*\.eot)
+  mime_type: application/vnd.ms-fontobject
+  static_files: fonts/\1
+  upload: fonts/(.*\.eot)
+
+- url: /fonts/(.*\.woff)
+  mime_type: application/font-woff
+  static_files: fonts/\1
+  upload: fonts/(.*\.woff)
+
+- url: /fonts/(.*\.svg)
+  mime_type: image/svg+xml
+  static_files: fonts/\1
+  upload: fonts/(.*\.svg)
+
+- url: /fonts/(.*\.ttf)
+  mime_type: application/x-font-ttf
+  static_files: fonts/\1
+  upload: fonts/(.*\.ttf)
+
+- url: /fonts/(.*\.otf)
+  mime_type: application/octet-stream
+  static_files: fonts/\1
+  upload: fonts/(.*\.otf)
+
+- url: /js/(.*)
+  static_files: js/\1
+  upload: js/(.*)
+
+- url: /(.*\.html)
+  static_files: \1
+  upload: index.html
+
+- url: .*
+  script: main.py

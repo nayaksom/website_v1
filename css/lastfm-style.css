@@ -1,0 +1,44 @@
+ul li {
+  list-style: none;
+ /* position:relative;
+	float:left;
+	width:140px;
+	height:64px;*/
+	padding:8px 8px 8px 80px;
+	margin:0 20px 20px 0;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border:solid 1px #333;
+	background:#1a1a1a;
+}
+ul {
+  margin: 10px 0 30px;
+  padding: 0;
+}
+ul li {
+  margin: 10px 0 0;
+  padding: 5px;
+  overflow: hidden;
+  border-bottom: 1px dashed #cccccc;
+}
+ul li i {
+  display: block;
+  padding-top: 8px;
+}
+ul li .date {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+ul li div.listening_now {
+  margin-top: 2px;
+}
+ul li div.listening_now img {
+  margin: 6px 5px 0 0;
+  float: left;
+}
+ul li img.cover {
+  margin: 3px 10px 0 0;
+  float: left;
+  width: 34px;
+  height: 34px;
+}
